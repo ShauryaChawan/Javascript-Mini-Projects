@@ -1,0 +1,43 @@
+html {
+  margin: 0;
+}
+
+span {
+  display: block;
+}
+.parent {
+  margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  width: 150px;
+  height: 150px;
+  border: solid black 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#grey {
+  background: grey;
+}
+
+#red {
+  background: red;
+}
+#blue {
+  background: blue;
+}
+#yellow {
+  background: yellow;
+}
