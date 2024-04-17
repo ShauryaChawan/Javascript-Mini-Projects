@@ -1,9 +1,9 @@
-let randomNumber = parseInt(Math.random() * 10 + 1);
+let randomNumber = parseInt(Math.random() * 100 + 1);
 
 const submit = document.querySelector("#subt");
 const userInput = document.querySelector("#guessField");
 const guessSlot = document.querySelector(".guesses");
-const remaining_guessess = document.querySelector(".remaining_guessess");
+const remaining = document.querySelector(".lastResult");
 const lowOrHi = document.querySelector(".lowOrHi");
 const startOver = document.querySelector(".resultParas");
 
@@ -28,11 +28,11 @@ function validateGuess(guess) {
     alert("PLease enter a valid number");
   } else if (guess < 1) {
     alert("PLease enter a number more than 1");
-  } else if (guess > 10) {
+  } else if (guess > 100) {
     alert("PLease enter a  number less than 100");
   } else {
     prevGuess.push(guess);
-    if (numGuess === 6) {
+    if (numGuess === 11) {
       displayGuess(guess);
       displayMessage(`Game Over. Random number was ${randomNumber}`);
       endGame();
@@ -58,7 +58,7 @@ function displayGuess(guess) {
   userInput.value = "";
   guessSlot.innerHTML += `${guess}, `;
   numGuess++;
-  remaining_guessess.innerHTML = `${5 - numGuess} `;
+  remaining.innerHTML = `${11 - numGuess} `;
 }
 
 function displayMessage(message) {
@@ -82,7 +82,7 @@ function newGame() {
     prevGuess = [];
     numGuess = 1;
     guessSlot.innerHTML = "";
-    remaining_guessess.innerHTML = `${11 - numGuess} `;
+    remaining.innerHTML = `${11 - numGuess} `;
     userInput.removeAttribute("disabled");
     startOver.removeChild(p);
 

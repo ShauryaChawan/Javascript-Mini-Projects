@@ -9,9 +9,6 @@
     <title>BMI Calculator</title>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-    </nav>
     <div class="container">
       <h1>BMI Calculator</h1>
       <form>
@@ -29,4 +26,9 @@
     </div>
   </body>
   <script src="script.js"></script>
+  <script src="../navbar.js"></script>
+    <script>
+      const navbar = createNavbar();
+      document.body.prepend(navbar);
+    </script>
 </html>

@@ -9,9 +9,6 @@
     <title>JavaScript Background Color Switcher</title>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-    </nav>
     <div class="parent">
       <h1>Color Scheme Switcher</h1>
       <div class="canvas">
@@ -26,5 +23,10 @@
       </h2>
     </div>
     <script src="script.js"></script>
+    <script src="../navbar.js"></script>
+    <script>
+      const navbar = createNavbar();
+      document.body.prepend(navbar);
+    </script>
   </body>
 </html>
